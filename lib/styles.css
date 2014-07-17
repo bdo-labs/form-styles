@@ -47,6 +47,15 @@ input.priority {
     background-color: rgb(190,50,50);
   }
 
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: solid 1px rgb(230,230,230);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
 button[name=delete] {
   -webkit-appearance: none;
   appearance: none;
