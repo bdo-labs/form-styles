@@ -1,0 +1,30 @@
+{
+  "name": "form-styles",
+  "version": "0.0.1",
+  "description": "Global form styles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bdo-labs/form-styles.git"
+  },
+  "keywords": [
+    "form",
+    "style"
+  ],
+  "author": "Henrik Kjelsberg <henrik.kjelsberg@bdo.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdo-labs/form-styles/issues"
+  },
+  "atomify": {
+    "css": {
+      "entry": "lib/styles.css"
+    }
+  },
+  "homepage": "https://github.com/bdo-labs/form-styles",
+  "devDependencies": {
+    "atomify": "^3.1.6",
+    "handlebars": "^1.3.0",
+    "hbsfy": "^1.3.2",
+    "resrcify": "^1.0.1"
+  }
+}

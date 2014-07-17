@@ -1,0 +1,60 @@
+
+form header, form footer {
+  padding: 2em;
+}
+
+input[type="text"], textarea {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgb(230,230,230);
+  box-sizing: border-box;
+  padding: .8em 1em;
+  width: 100%;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+input.priority {
+  -webkit-appearance: none;
+  appearance: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: 20em;
+  height: 1.3em;
+  vertical-align: bottom;
+  width: 1.3em;
+}
+  input.priority-low {
+    border-color: rgb(0,190,120);
+  }
+  input.priority-low:checked {
+    background-color: rgb(0,190,120);
+  }
+  input.priority-medium {
+    border-color: rgb(236,209,163);
+  }
+  input.priority-medium:checked {
+    background-color: rgb(236,209,163);
+  }
+  input.priority-high {
+    border-color: rgb(190,50,50);
+  }
+  input.priority-high:checked {
+    background-color: rgb(190,50,50);
+  }
+
+button[name=delete] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(190,50,50);
+  border: none;
+  box-sizing: border-box;
+  color: rgb(255,255,255);
+  padding: 1em;
+  width: 100%;
+}
+
