@@ -1,9 +1,17 @@
 
+:root {
+  --red: rgb(190,50,50);
+  --blue: rgb(46,129,183);
+}
 
-form header,
-form footer {
+
+form header, form footer {
   padding: 2em;
   text-align: center;
+}
+
+input {
+  font-size: inherit;
 }
 
 fieldset,
@@ -11,8 +19,6 @@ flow-drop {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: rgb(230,230,230);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   font-size: inherit;
@@ -23,11 +29,11 @@ flow-drop {
 }
 
 flow-drop.dragging .fa {
-  color: rgb(46,129,183);
+  color: var(--blue);
 }
 
 .ng-dirty.ng-invalid {
-  border-color: rgb(190,50,50);
+  border-color: var(--red);
 }
 
 :required::after {
@@ -50,30 +56,25 @@ input.priority {
   vertical-align: bottom;
   width: 1.3em;
 }
+  input.priority-low {
+    border-color: rgb(0,190,120);
+  }
+  input.priority-low:checked {
+    background-color: rgb(0,190,120);
+  }
+  input.priority-medium {
+    border-color: rgb(236,209,163);
+  }
+  input.priority-medium:checked {
+    background-color: rgb(236,209,163);
+  }
+  input.priority-high {
+    border-color: var(--red);
+  }
+  input.priority-high:checked {
+    background-color: var(--red);
+  }
 
-input.priority-low {
-  border-color: rgb(0,190,120);
-}
-
-input.priority-low:checked {
-  background-color: rgb(0,190,120);
-}
-
-input.priority-medium {
-  border-color: rgb(236,209,163);
-}
-
-input.priority-medium:checked {
-  background-color: rgb(236,209,163);
-}
-
-input.priority-high {
-  border-color: rgb(190,50,50);
-}
-
-input.priority-high:checked {
-  background-color: rgb(190,50,50);
-}
 
 .radio-group {
   display: inline-block;
@@ -88,22 +89,21 @@ button {
   border-radius: 4px;
   padding: .8em 1em;
   vertical-align: middle;
-  -webkit-transition: border-color .2s ease;
   transition: border-color .2s ease;
 }
+  button:hover {
+    border-color: rgb(120,120,120);
+  }
+  button[name="delete"]:hover {
+    border-color: var(--red);
+  }
 
-button:hover {
-  border-color: rgb(120,120,120);
-}
 
-button[name="delete"]:hover {
-  border-color: rgb(190,50,50);
-}
+
 
 /**
  * Temporary
  */
-
 form h5 {
   color: rgb(46,129,183);
 }
@@ -112,3 +112,4 @@ form {
   font-family: Fira Sans, Helvetica;
   font-size: 1em;
 }
+
