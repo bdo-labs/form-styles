@@ -1,29 +1,76 @@
+/**
+ * General purpose form-styles.
+ *
+ * @author Henrik Kjelsberg <henrik.kjelsberg@bdo.no>
+ * @license MIT
+ */
+
 
 
 form header,
 form footer {
+  color: rgb(46,129,183);
   padding: 2em;
   text-align: center;
 }
 
+fieldset {
+  padding: 0;
+  margin-bottom: 2.5em;
+}
+
+/**
+ * Inherit typographic scale.
+ */
+
+input,
+textarea,
+button,
+label,
+legend {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/**
+ * Sleek, minimal form-fields.
+ *
+ * TODO Move flow-drop styling to the components using it
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="datetime"],
+input[type="dateTimeLocal"],
+textarea,
 fieldset,
 flow-drop {
+  appearance: none;
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: rgb(230,230,230);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: block;
-  font-size: inherit;
-  min-height: 40px;
   outline: none;
-  padding: .8em 1em;
+  padding-bottom: .7em;
   width: 100%;
+  resize: none;
+  -webkit-transition: border-color 1s ease;
+  transition: border-color 1s ease;
 }
 
-flow-drop.dragging .fa {
-  color: rgb(46,129,183);
+input:hover,
+textarea:hover {
+  will-change: border-color;
+}
+
+input:focus,
+textarea:hover {
+  border-color: rgb(120,120,120);
 }
 
 .ng-dirty.ng-invalid {
@@ -34,10 +81,36 @@ flow-drop.dragging .fa {
   content: '*';
 }
 
-textarea {
-  height: 120px;
-  resize: none;
+/**
+ * Outlined buttons.
+ */
+
+button {
+  appearance: none;
+  background: transparent;
+  border: solid 1px rgb(230,230,230);
+  border-radius: 4px;
+  padding: .75em 1em;
+  vertical-align: middle;
+  -webkit-transition: border-color .3s ease;
+  transition: border-color .3s ease;
 }
+
+button:hover {
+  border-color: rgb(120,120,120);
+}
+
+button[name="delete"]:hover {
+  border-color: rgb(190,50,50);
+}
+
+flow-drop.dragging .fa {
+  color: rgb(46,129,183);
+}
+
+/**
+ * TODO Create priority-component and move styles.
+ */
 
 input.priority {
   -webkit-appearance: none;
@@ -78,37 +151,4 @@ input.priority-high:checked {
 .radio-group {
   display: inline-block;
   float: right;
-}
-
-button {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: solid 1px rgb(230,230,230);
-  border-radius: 4px;
-  padding: .8em 1em;
-  vertical-align: middle;
-  -webkit-transition: border-color .2s ease;
-  transition: border-color .2s ease;
-}
-
-button:hover {
-  border-color: rgb(120,120,120);
-}
-
-button[name="delete"]:hover {
-  border-color: rgb(190,50,50);
-}
-
-/**
- * Temporary
- */
-
-form h5 {
-  color: rgb(46,129,183);
-}
-
-form {
-  font-family: Fira Sans, Helvetica;
-  font-size: 1em;
 }
